@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Arbol>
+    <Nodo Pregunta="True" Rama="Raiz" Valor="Alcohólica">
+        <Nodo Pregunta="True" Rama="Si" Valor="De uvas">
+            <Nodo Pregunta="False" Rama="Si" Valor="Vino"/>
+            <Nodo Pregunta="True" Rama="No" Valor="Poco Alcohol">
+                <Nodo Pregunta="False" Rama="No" Valor="Tequila"/>
+            </Nodo>
+        </Nodo>
+        <Nodo Pregunta="True" Rama="No" Valor="Caliente">
+            <Nodo Pregunta="True" Rama="Si" Valor="Legal">
+                <Nodo Pregunta="True" Rama="Si" Valor="Drácula lo consume">
+                    <Nodo Pregunta="True" Rama="No" Valor="Es sagrado"/>
+                </Nodo>
+            </Nodo>
+            <Nodo Pregunta="True" Rama="No" Valor="Tóxico">
+                <Nodo Pregunta="False" Rama="Si" Valor="Cloro"/>
+            </Nodo>
+        </Nodo>
+    </Nodo>
+</Arbol>
