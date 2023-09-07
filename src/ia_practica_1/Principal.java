@@ -36,12 +36,12 @@ public class Principal {
 			System.out.println("");
 			switch (opcion) {
 			case "1": {
-				// Ver arbol actual
+				// Ver arbol actual.
 				arbol.imprimir();
 				break;
 			}
 			case "2": {
-				// Ver solo bebidas en sistema
+				// Ver solo bebidas en sistema.
 				arbol.imprimirListaBebidas(false);
 				break;
 			}
@@ -61,18 +61,20 @@ public class Principal {
 				break;
 			}
 			case "6": {
-				//
+				// Opción para guardar el arbol en un archivo XML.
 				memoria.creaXMLDeArbolYSalva(arbol);
 				break;
 			}
 			case "7": {
-				//
+				// Opción para salir del programa.
 				System.out.println("\n¡Muchas gracias! Hasta luego.\n");
 				return;
 				// break;
 			}
 			default:
+				// Opción en caso de respuesta erronea
 				System.out.println("Respuesta Erronea.\n");
+				break;
 			}
 
 		}
@@ -238,10 +240,22 @@ class Arbol {
 			nodo = nodo.padre;
 		}
 		System.out.println("");
+		
 		for (int x = busquedaPaAtras.size() - 1; x >= 0; x--) {
 			Nodo tempNodo = busquedaPaAtras.get(x);
+			String acasoEs = "";
+			
+			if(x != 0) {
+				if(tempNodo.rama_si == busquedaPaAtras.get(x-1)) {
+					acasoEs = "(Si)";
+				}else {
+					acasoEs = "(No)";
+				}	
+			}
+			
+			
 			if (x != 0) {
-				System.out.print("" + tempNodo.valor + " -> ");
+				System.out.print("" + tempNodo.valor + acasoEs + " -> ");
 			} else {
 				System.out.print("" + tempNodo.valor);
 			}
@@ -292,7 +306,6 @@ class Arbol {
 			}
 			checkNodo = cola.siguiente();
 		}
-
 	}
 
 	public void agregarBebida() {
@@ -452,7 +465,6 @@ class Arbol {
 
 		ColaNodos cola = new ColaNodos();
 		Nodo nodo_actual = raiz;
-		if(nodosRecorridos != null)nodosRecorridos.add(nodo_actual);
 		
 		while (nodo_actual != null) {
 			// Se encontró el valor

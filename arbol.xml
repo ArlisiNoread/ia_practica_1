@@ -4,17 +4,24 @@
         <Nodo Pregunta="True" Rama="Si" Valor="De uvas">
             <Nodo Pregunta="False" Rama="Si" Valor="Vino"/>
             <Nodo Pregunta="True" Rama="No" Valor="Poco Alcohol">
+                <Nodo Pregunta="False" Rama="Si" Valor="Licor"/>
                 <Nodo Pregunta="False" Rama="No" Valor="Tequila"/>
             </Nodo>
         </Nodo>
         <Nodo Pregunta="True" Rama="No" Valor="Caliente">
             <Nodo Pregunta="True" Rama="Si" Valor="Legal">
                 <Nodo Pregunta="True" Rama="Si" Valor="Drácula lo consume">
-                    <Nodo Pregunta="True" Rama="No" Valor="Es sagrado"/>
+                    <Nodo Pregunta="False" Rama="Si" Valor="Sangrita"/>
+                    <Nodo Pregunta="True" Rama="No" Valor="Es sagrado">
+                        <Nodo Pregunta="False" Rama="Si" Valor="Agua Bendita"/>
+                        <Nodo Pregunta="False" Rama="No" Valor="Chocolate Caliente"/>
+                    </Nodo>
                 </Nodo>
+                <Nodo Pregunta="False" Rama="No" Valor="Ayahuasca"/>
             </Nodo>
             <Nodo Pregunta="True" Rama="No" Valor="Tóxico">
                 <Nodo Pregunta="False" Rama="Si" Valor="Cloro"/>
+                <Nodo Pregunta="False" Rama="No" Valor="Té"/>
             </Nodo>
         </Nodo>
     </Nodo>
